@@ -1,0 +1,75 @@
+@import './../../styles/colors';
+@import './../../styles/utils';
+
+.details-card {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 1px 4px 30px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 30px -9px rgba(0,0,0,0.75);
+    box-shadow: 1px 4px 30px -9px rgba(0,0,0,0.75);
+    @extend %pointer;
+
+    &:hover {
+        -webkit-box-shadow: 2px 4px 30px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 4px 30px -5px rgba(0,0,0,0.75);
+        box-shadow: 2px 4px 30px -5px rgba(0,0,0,0.75);
+    }
+
+    .card-link {
+        text-decoration: none;
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+        }
+    }
+
+    .img-bg {
+        background: url(https://cdn.pixabay.com/photo/2017/10/27/15/12/geeks-2894621_960_720.jpg) center bottom no-repeat;
+        background-size: cover;
+        @include height(200);
+    }
+    .content {
+        @include padding(0, 20, 20);
+        h3 {
+            color: $grey-four;
+        }
+        .row-1 {
+            @include flex();
+            @include justify-space-between();
+            div {
+                &:first-child {
+                    color: $green-one;
+                    font-weight: bold;
+                }
+                &:last-child {
+                    color: $grey-one;
+                    font-weight: bold;
+                }
+            }
+        }
+        p {
+            color: $grey-two;
+        }
+    }
+    .card-footer {
+        @include flex();
+        @include align-center();
+        @include justify-right();
+        @include padding(15, 20);
+        color: $grey-two;
+        border-top: 1px solid $grey-three;
+        
+        div {
+            padding-left: 0.8rem;
+        }
+    }
+    @include mobile {
+        max-width: 400px;
+    }
+    @include tablet {
+        width: 47%;
+        .img-bg {
+            @include height(300);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import './../../styles/colors';
+@import './../../styles/utils';
+
+.articles-main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+	@include padding(110, 30);
+    margin: auto;
+	@include flex();
+    @include justify-center();
+    flex-wrap: wrap;
+    
+    @include tablet {
+        @include justify-space-between();
+        @include padding(120, 60);
+    }
+}

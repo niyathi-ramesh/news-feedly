@@ -1,0 +1,27 @@
+@import './../../styles/colors';
+@import './../../styles/utils';
+
+.navbar {
+	position: fixed;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+	@include padding(20, 26);
+	background-color: white;
+	@include flex();
+	@include justify-space-between();
+	-webkit-box-shadow: -3px -5px 82px -28px rgba(0,0,0,0.75);
+	-moz-box-shadow: -3px -5px 82px -28px rgba(0,0,0,0.75);
+	box-shadow: -3px -5px 82px -28px rgba(0,0,0,0.75);
+	a {
+		i {
+			color: black;
+		}
+		&:hover,
+		&.active {
+			i {
+				color: $blue;
+			}
+		}
+	}
+}
